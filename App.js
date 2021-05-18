@@ -21,9 +21,11 @@ export default function App() {
    //    }
    // })
 
-   const changeScrolled = () => {
-      setAmountScrolled("scrolling")
-   }
+
+   const changeScrolled = (event) => {
+      const positionY = event.nativeEvent.contentOffset.y;
+      setAmountScrolled(positionY)
+      }
 
    // useEffect(() => {
    //    window.addEventListener('scroll', changeScrolled);

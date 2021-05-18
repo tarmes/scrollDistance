@@ -5,13 +5,13 @@ const Header = (props) => {
 
    const { amountScrolled } = props;
 
-   let docHeight = useWindowDimensions().height;
+   let winHeight = useWindowDimensions().height;
 
 
    return (
       <View>
          <Text style={styles.header}>Amount Scrolled: {amountScrolled}</Text>
-         <Text style={styles.header}>DocHeight: {docHeight}</Text>
+         <Text style={styles.header}>Window Height: {winHeight}</Text>
       </View>
       
    )
