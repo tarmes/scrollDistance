@@ -1,15 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, useWindowDimensions } from 'react-native';
 
 const Header = (props) => {
 
    const { amountScrolled } = props;
 
+   let docHeight = useWindowDimensions().height;
 
 
    return (
       <View>
-         <Text style={styles.header}>Check this out. Amount Scrolled: {amountScrolled}</Text>
+         <Text style={styles.header}>Amount Scrolled: {amountScrolled}</Text>
+         <Text style={styles.header}>DocHeight: {docHeight}</Text>
       </View>
       
    )
